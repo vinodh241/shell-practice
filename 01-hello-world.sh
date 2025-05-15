@@ -1,4 +1,4 @@
 # !bin/bash
-  helloworld
-  welcometoshellscripting 
-  Thisisasamplescripting 
+echo "helloworld"
+echo  "welcometoshellscripting" 
+echo  "Thisisasamplescripting"
