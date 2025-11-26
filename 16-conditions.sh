@@ -14,3 +14,9 @@ fi
 
 dnf install httpd -y 
 
+if [ $? -eq 0 ]
+then 
+    echo "Https is installed successfully..."
+else
+    echo "ERROR:: httpd installation failed.."
+fi
