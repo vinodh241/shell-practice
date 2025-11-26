@@ -19,4 +19,6 @@ then
     echo "Https is installed successfully..."
 else
     echo "ERROR:: httpd installation failed.."
+    exit 1
+    
 fi
