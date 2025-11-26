@@ -12,13 +12,25 @@ if [ $USERID -ne 0 ]
 
 fi
 
-dnf install httpd -y 
+dnf list installed httpd 
 
 if [ $? -eq 0 ]
-then 
-    echo "Https is installed successfully..."
+then
+    echo "Httpd is not installed .... going to install now... "
+
+  dnf install httpd -y 
+  
+        if [ $? -eq 0 ]
+        then 
+            echo "Https is installed successfully..."
+        else
+            echo "ERROR:: httpd installation failed.."
+            exit 1
+        fi
+
 else
-    echo "ERROR:: httpd installation failed.."
+    echo "https is already installed on this system..."
     exit 1
-    
 fi
+
+ 
