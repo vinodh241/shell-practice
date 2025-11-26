@@ -12,24 +12,24 @@ if [ $USERID -ne 0 ]
 
 fi
 
-dnf list installed httpd 
+dnf list installed mysql
 
 if [ $? -eq 0 ]
 then
-    echo "Httpd is not installed .... going to install now... "
+    echo "mysql is not installed .... going to install now... "
 
-  dnf install httpd -y 
-  
+  dnf install mysql -y 
+
         if [ $? -eq 0 ]
         then 
-            echo "Https is installed successfully..."
+            echo "mysql is installed successfully..."
         else
-            echo "ERROR:: httpd installation failed.."
+            echo "ERROR:: mysql installation failed.."
             exit 1
         fi
 
 else
-    echo "https is already installed on this system..."
+    echo "mysql is already installed on this system..."
     exit 1
 fi
 
