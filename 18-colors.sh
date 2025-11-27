@@ -27,7 +27,7 @@ fi
             fi
         }
 
-dnf list installed java maven
+dnf list installed httpd maven
 
 if [ $? -ne 0 ]
 then
@@ -38,7 +38,7 @@ then
     validate "$1 and $2"
 
 else
-    echo -e  "$Y $1 and $2 is already installed .. Nothing to do $N "     
+    echo -e  "$Y maven and httpd is already installed .. Nothing to do $N "     
 
 fi
  
