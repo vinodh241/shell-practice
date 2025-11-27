@@ -18,6 +18,7 @@ else
     echo -e "$G Success:: you are running with root access $N"
 fi
 
+
         validate () {
             if [ $? -eq 0 ]
             then
@@ -27,18 +28,21 @@ fi
             fi
         }
 
-dnf list installed httpd maven
+
+
+
+dnf list installed vim and unzip
 
 if [ $? -ne 0 ]
 then
     echo -e  "$R ERROR:: httpd is not installed .... going to install now...$N "
 
-    dnf remove httpd maven -y 
+    dnf install vim unzip -y 
 
     validate "$1 and $2"
 
 else
-    echo -e  "$Y maven and httpd is already installed .. Nothing to do $N "     
+    echo -e  "$Y  vim and unzip  is already installed .. Nothing to do $N "     
 
 fi
  
