@@ -29,18 +29,18 @@ fi
             fi
         }
 
-dnf list installed git and nodejs &>> $LOG_FILE
+dnf list installed nodejs &>> $LOG_FILE
 
 if [ $? -ne 0 ]
 then
-    echo -e  "$R ERROR:: $1 and $2 is not installed .... going to install now...$N " | tee -a $LOG_FILE
+    echo -e  "$R ERROR:: $1 is not installed .... going to install now...$N " | tee -a $LOG_FILE
 
     dnf install vim unzip -y  &>> $LOG_FILE
 
-    validate "$1 and $2"
+    validate "$1
 
 else
-    echo -e  "$Y  vim and nodejs  is already installed .. Nothing to do $N "   | tee -a $LOG_FILE 
+    echo -e  "$Y nodejs  is already installed .. Nothing to do $N "   | tee -a $LOG_FILE 
 
 fi
  
