@@ -12,7 +12,7 @@ B=\e[34m
 W=\e[37m
 N=\e[0m
 
-if [ $USEDID -ne 0]
+if [ $USERID -ne 0]
 then
     echo -e "$R ERROR:: pleae run this script with root access $N"
     exit 1 # we can give other than zero upto 127
