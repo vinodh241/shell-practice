@@ -26,15 +26,15 @@ validate () {
         echo -e "$R ERROR:: $1 installation failed $N"
 }
 
-dnf list installed mysql
+dnf list installed git
 
 if [ $? -ne 0 ]
 then
-    echo -e  "$R ERROR:: mysql is not installed .... going to install now...$N "
-    dnf install mysql -y 
+    echo -e  "$R ERROR:: git is not installed .... going to install now...$N "
+    dnf install git -y 
     validate "MYSQL"
 else
-    echo -e  "$Y MYSQL is already installed .. Nothing to do $N "     
+    echo -e  "$Y git is already installed .. Nothing to do $N "     
 fi
  
 
