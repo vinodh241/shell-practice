@@ -27,15 +27,19 @@ fi
             fi
         }
 
-dnf list installed httpd maven
+dnf list installed java maven
 
 if [ $? -ne 0 ]
 then
     echo -e  "$R ERROR:: httpd is not installed .... going to install now...$N "
-    dnf install httpd -y 
-    validate "MYSQL"
+
+    dnf install httpd maven -y 
+
+    validate "$1 and $2"
+
 else
     echo -e  "$Y httpd is already installed .. Nothing to do $N "     
+
 fi
  
 
