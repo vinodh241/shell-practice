@@ -35,10 +35,9 @@ if [ $? -ne 0 ]
 then
     echo -e  "$R ERROR:: $1 is not installed .... going to install now...$N " | tee -a $LOG_FILE
 
-    dnf install vim unzip -y  &>> $LOG_FILE
+    dnf install vim nodejs -y  &>> $LOG_FILE
 
     validate "$1
-
 else
     echo -e  "$Y nodejs  is already installed .. Nothing to do $N "   | tee -a $LOG_FILE 
 
