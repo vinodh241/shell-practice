@@ -29,7 +29,7 @@ fi
 
 #dnf list installed httpd maven
 
-if [ $? -eq 0 ]
+if [ $? -ne 0 ]
 then
     echo -e  "$R ERROR:: httpd is not installed .... going to install now...$N "
 
