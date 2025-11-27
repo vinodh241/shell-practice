@@ -27,7 +27,7 @@ fi
             fi
         }
 
-#dnf list installed httpd maven
+dnf list installed httpd maven
 
 if [ $? -ne 0 ]
 then
