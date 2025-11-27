@@ -18,13 +18,14 @@ else
     echo -e "$G Success:: you are running with root access $N"
 fi
 
-validate () {
-    if [ $? -eq 0 ]
-    then
-        echo -e "$G SUCCESS:: $1 is installed successfully $N"
-    else
-        echo -e "$R ERROR:: $1 installation failed $N"
-}
+        validate () {
+            if [ $? -eq 0 ]
+            then
+                echo -e "$G SUCCESS:: $1 is installed successfully $N"
+            else
+                echo -e "$R ERROR:: $1 installation failed $N"
+            fi
+        }
 
 dnf list installed git
 
@@ -34,7 +35,7 @@ then
     dnf install git -y 
     validate "MYSQL"
 else
-    echo -e  "$Y git is already installed .. Nothing to do $N "     
+    echo -e  "$Y  is already installed .. Nothing to do $N "     
 fi
  
 
