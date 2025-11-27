@@ -42,7 +42,7 @@ do
 
             dnf install $package -y  &>> $LOG_FILE
 
-            validate "$1"
+            validate "$package"
 
         else
             echo  -e  "$Y $package is already installed .. Nothing to do $N"   | tee -a $LOG_FILE 
