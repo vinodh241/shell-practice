@@ -38,7 +38,7 @@ then
     validate "$1 and $2"
 
 else
-    echo -e  "$Y httpd is already installed .. Nothing to do $N "     
+    echo -e  "$Y $1 and $2 is already installed .. Nothing to do $N "     
 
 fi
  
