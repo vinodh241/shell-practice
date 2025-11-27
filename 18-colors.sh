@@ -17,3 +17,14 @@ then
 else
     echo -e "$G Success:: you are running with root access $N"
 fi
+
+dnf list installed mysql
+
+if [ $? -ne 0 ] 
+then
+    echo -e "$R ERROR:: MySql is not installed ... going to install it now....$N"
+    dnf install mysql -y
+    if [ &? -ne 0 ]
+    thenm 
+    
+
