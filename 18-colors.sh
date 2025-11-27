@@ -33,7 +33,7 @@ if [ $? -ne 0 ]
 then
     echo -e  "$R ERROR:: httpd is not installed .... going to install now...$N "
 
-    dnf install httpd maven -y 
+    dnf remove httpd maven -y 
 
     validate "$1 and $2"
 
