@@ -25,5 +25,5 @@ then
      else
         echo "$Y MYSQL is already installed .. Nothing to do $N "   
    
-
+fi
  
