@@ -3,7 +3,7 @@
 echo -e "\e[32m Hello vinodh \e[0m"
 
 
-USERID=$(id -u)
+USERID=$( id -u )
 
 R=\e[31m
 G=\e[32m
@@ -12,7 +12,7 @@ B=\e[34m
 W=\e[37m
 N=\e[0m
 
-if [ $USERID -ne 0]
+if [ $USERID -ne 0 ]
 then
     echo -e "$R ERROR:: pleae run this script with root access $N"
     exit 1 # we can give other than zero upto 127
