@@ -21,3 +21,30 @@ else
     echo -e "$G Success:: you are running with root access $N" | tee -a $LOG_FILE
 fi
 
+
+        validate () {
+            if [ $? -eq 0 ]
+            then
+                echo -e "$G SUCCESS:: $1 is installed successfully $N"  | tee -a $LOG_FILE
+            else
+                echo -e "$R ERROR:: $1 installation failed $N" | tee -a $LOG_FILE
+            fi
+        }
+
+
+
+
+dnf list installed vim and unzip &>> $LOG_FILE
+
+if [ $? -ne 0 ]
+then
+    echo -e  "$R ERROR:: httpd is not installed .... going to install now...$N " | tee -a $LOG_FILE
+
+    dnf install vim unzip -y  &>> $LOG_FILE
+    validate "$1 and $2"
+
+else
+    echo -e  "$Y  vim and unzip  is already installed .. Nothing to do $N "   | tee -a $LOG_FILE 
+
+fi
+ 
