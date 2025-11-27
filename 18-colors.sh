@@ -5,12 +5,10 @@ echo -e "\e[32m Hello vinodh \e[0m"
 
 USERID=$( id -u )
 
-R=\e[31m
-G=\e[32m
-Y=\e[33m
-B=\e[34m
-W=\e[37m
-N=\e[0m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then
