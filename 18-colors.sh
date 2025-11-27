@@ -18,19 +18,21 @@ else
     echo -e "$G Success:: you are running with root access $N"
 fi
 
+validate () {
+    if [ $? -eq 0 ]
+    then
+        echo -e "$G SUCCESS:: $1 is installed successfully $N"
+    else
+        echo -e "$R ERROR:: $1 installation failed $N"
+}
+
 dnf list installed mysql
 
 if [ $? -ne 0 ]
 then
     echo -e  "$R ERROR:: mysql is not installed .... going to install now...$N "
     dnf install mysql -y 
-        if [ $? -eq 0 ]
-        then 
-            echo -e "$G SUCCESS:: MySQL is installed successfully $N "
-        else
-            echo -e "$R ERROR:: MYSQL installation failed $N "
-            exit 1
-        fi
+    validate "MYSQL"
 else
     echo -e  "$Y MYSQL is already installed .. Nothing to do $N "     
 fi
