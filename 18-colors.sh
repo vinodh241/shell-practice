@@ -27,15 +27,15 @@ fi
             fi
         }
 
-dnf list installed git
+dnf list installed httpd
 
 if [ $? -ne 0 ]
 then
-    echo -e  "$R ERROR:: git is not installed .... going to install now...$N "
-    dnf install git -y 
+    echo -e  "$R ERROR:: httpd is not installed .... going to install now...$N "
+    dnf install httpd -y 
     validate "MYSQL"
 else
-    echo -e  "$Y  is already installed .. Nothing to do $N "     
+    echo -e  "$Y httpd is already installed .. Nothing to do $N "     
 fi
  
 
