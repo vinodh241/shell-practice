@@ -74,3 +74,29 @@ then
 fi    
 
 
+if [ ! -d $SOURCE_DIR ]
+then
+    echo -e "$R source  $SOURCE_DIR  does not exist $N  "
+    exit 1
+
+else
+    echo -e "$G source  $SOURCE_DIR  exist $N " 
+fi
+
+if [ ! -d $DEST_DIR ]
+then
+    echo -e "$R destination  $DEST_DIR  does not exist $N  "
+    exit 1
+
+else
+    echo -e "$G  destination $DEST_DIR  exist $N " 
+fi
+
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+
+if [! -z $files]
+then
+
+else
+    echo -e " no files found older than 14 days  .... $Y SKIPPING $N
