@@ -90,7 +90,7 @@ then
     echo "files to zip are: $FILES"
     TIMESTAMP=$(date +%F-%H-%M-%S)
     ZIP_FILE="$DEST-DIR/app-logs-$TIMESTAMP.zip"
-    echo "$FILES | zip -@ $ZIP_FILE"
+    echo $FILES | zip -@ $ZIP_FILE
 
 
 else
