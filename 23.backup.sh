@@ -1,6 +1,6 @@
 
 # Actual process
------------------
+#-----------------
 
 # 14 days old log files can be zipped and placed into destination dir ...storage team usually monitors  the destination directiory if they find any files there they move to another server.
 
