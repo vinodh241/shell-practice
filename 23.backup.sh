@@ -95,5 +95,5 @@ if [! -z $files]
 then
 
 else
-    echo -e " no files found older than 14 days  .... $Y SKIPPING $N
+    echo -e " no files found older than 14 days  .... $Y SKIPPING $N"
 fi
