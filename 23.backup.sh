@@ -88,6 +88,10 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 if  [ ! -z "$FILES" ]
 then
     echo "files to zip are: $FILES"
+    TIMESTAMP=$(date +%F-%H-%M-%S)
+    ZIP_FILE="$DEST-DIR/app-logs-$TIMESTAMP.zip"
+    echo "$FILES | zip -@ $ZIP_FILE"
+
 
 else
     echo -e "$Y No files found older than 14 days  .... $G SKIPPING $N"
