@@ -93,7 +93,7 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 if [! -z $files ]
 then
-
+    echo "files there"
 else
     echo -e "no files found older than 14 days  .... $Y SKIPPING $N"
 fi
