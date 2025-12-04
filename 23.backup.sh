@@ -34,38 +34,32 @@ N="\e[0m"
 
 check_root(){
 
-    if [ $USERID -ne 0 ]
+if [ $USERID -ne 0 ]
     then
         echo -e "$R ERROR:: Please run this script with root access $N " | tee -a $LOG_FILE
         exit 1
      else
             echo -e "$G Your running with root access $N " | tee -a $LOG_FILE
-
 fi
-
 }
 
-
 validate () {
-
 if [ $? -eq 0 ]
     then
             echo -e "$G SUCCESS :: $1 is installed $N " | tee -a $LOG_FILE
     else
             echo -e "$R ERROR :: $1 installation is failed" | tee -a $LOG_FILE
  fi    
-
 }
 
 
 check_root
 mkdir -p $LOGS_FOLDER
 
-
 USAGE(){
 
-    echo -e "$R USAGE:: $N sh 23.backup.sh <source-dir> <destination.dir> <days(optional)>"
 
+    echo -e "$R USAGE:: $N sh 23.backup.sh <source-dir> <destination.dir> <days(optional)>"
 }
 
 if [ $# -lt 2  ]
@@ -93,7 +87,8 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 if [ ! -z $files ]
 then
-    echo "files there"
+    echo "files to zip are: $FILES"
+
 else
     echo -e "$Y No files found older than 14 days  .... $G SKIPPING $N"
 fi
