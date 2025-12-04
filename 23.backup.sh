@@ -24,7 +24,7 @@ DEST_DIR=$2
 DAYS=${3:-14}   ## if days are  providedd that will be considered, otherwise default 14 days
 
 LOGS_FOLDER="/var/log/shellscript.logs"
-SCRTIP_NAME=$( echo $0 | cut -d "." -f1)
+SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 R="\e[31m"
 G="\e[32m"
@@ -39,20 +39,20 @@ check_root(){
         echo -e "$R ERROR:: Please run this script with root access $N " | tee -a $LOG_FILE
         exit 1
      else
-            echo -e "$G Your running with root access $N " | tee -a $LOG_FIE
+            echo -e "$G Your running with root access $N " | tee -a $LOG_FILE
 
 fi
 
 }
 
 
-validate ( ) {
+validate () {
 
-if [ $? -eq 0]
+if [ $? -eq 0 ]
     then
-            echo -e "$G SUCCESS :: $1 is installed $N " | tee -a $LOG_FIE
+            echo -e "$G SUCCESS :: $1 is installed $N " | tee -a $LOG_FILE
     else
-            echo -e "$R ERROR :: $1 installation is failed" | tee -a $LOG_FIE
+            echo -e "$R ERROR :: $1 installation is failed" | tee -a $LOG_FILE
  fi    
 
 }
@@ -62,7 +62,7 @@ check_root
 mkdir -p $LOGS_FOLDER
 
 
-USAGE( ){
+USAGE(){
 
     echo -e "$R USAGE:: $N sh 23.backup.sh <source-dir> <destination.dir> <days(optional)>"
 
@@ -91,7 +91,7 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-if [! -z $files]
+if [! -z $files ]
 then
 
 else
