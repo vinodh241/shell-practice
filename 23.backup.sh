@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # Actual process
 #-----------------
 
@@ -18,11 +18,7 @@
 
 ## sh backup.sh <Source_DIR> <Destination_DIR >
 
-
-
-
-#!/bin/bash
-
+USERUID=$(id -u )
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS_KEEP=${3:-14}   ## if days are  providedd that will be considered, otherwise default 14 days
@@ -30,12 +26,10 @@ DAYS_KEEP=${3:-14}   ## if days are  providedd that will be considered, otherwis
 LOGS_FOLDER="/var/log/shellscript.logs"
 SCRTIP_NAME=$( echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-USERUID=$( id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-
 
 
 check_root(){
