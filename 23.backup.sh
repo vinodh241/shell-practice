@@ -91,7 +91,7 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-if [! -z $files ]
+if [ ! -z $files ]
 then
     echo "files there"
 else
