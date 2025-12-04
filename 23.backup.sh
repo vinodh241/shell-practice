@@ -21,7 +21,7 @@
 USERID=$(id -u )
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS_KEEP=${3:-14}   ## if days are  providedd that will be considered, otherwise default 14 days
+DAYS=${3:-14}   ## if days are  providedd that will be considered, otherwise default 14 days
 
 LOGS_FOLDER="/var/log/shellscript.logs"
 SCRTIP_NAME=$( echo $0 | cut -d "." -f1)
@@ -95,5 +95,5 @@ if [! -z $files]
 then
 
 else
-    echo -e " no files found older than 14 days  .... $Y SKIPPING $N"
+    echo -e "no files found older than 14 days  .... $Y SKIPPING $N"
 fi
