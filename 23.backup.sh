@@ -18,7 +18,7 @@
 
 ## sh backup.sh <Source_DIR> <Destination_DIR >
 
-USERUID=$(id -u )
+USERID=$(id -u )
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS_KEEP=${3:-14}   ## if days are  providedd that will be considered, otherwise default 14 days
