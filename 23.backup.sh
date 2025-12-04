@@ -79,8 +79,6 @@ then
     echo -e "$R source  $SOURCE_DIR  does not exist $N  "
     exit 1
 
-else
-    echo -e "$G source  $SOURCE_DIR  exist $N " 
 fi
 
 if [ ! -d $DEST_DIR ]
@@ -88,8 +86,6 @@ then
     echo -e "$R destination  $DEST_DIR  does not exist $N  "
     exit 1
 
-else
-    echo -e "$G  destination $DEST_DIR  exist $N " 
 fi
 
 
